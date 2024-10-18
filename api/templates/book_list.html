@@ -1,0 +1,12 @@
+<div style="margin:0; padding: 0; display: flex; with:100vw;height: 100vh; flex-direction: column; align-items: center;justify-content:center; background:#a8a8f7">
+    <h1 style="color: #fff; font-weight: bold">Todos los libros</h1>
+    
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} (Published: {{ book.published_date }})</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'book-create' %}">Agregar libro</a>
+
+</div>
